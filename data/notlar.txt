@@ -1,0 +1,24 @@
+Tarih: 27-28.10.2026
+
+KAYNAKLAR
+- DRKG: GitHub gnn4dr/DRKG, 2020 sürümü, 27.10.2026'da indirildi.
+  drkg.tsv: 5.874.261 satır, 24.313 benzersiz ilaç.
+  Lisans: Apache-2.0; içindeki DrugBank, GNBR, STRING CC BY-NC.
+- TWOSIDES: nsides.io (OffSIDES/TwoSIDES), 27.10.2026'da indirildi.
+  42.920.391 satır, 2.357 benzersiz ilaç. Veri eski (güncelleme planlanıyor).
+- RxNav (ATC L01): 266 ilaç, 28.10.2026'da çekildi.
+
+KEMOTERAPİ İLAÇLARI
+- DRKG'de ATC L01: 207 ilaç (DrugBank kimliği).
+- TWOSIDES'ta L01: 124 ilaç (RxNorm kimliği).
+- İki sayı farklı kaynaklardan, doğrudan karşılaştırılamaz.
+
+ÜRETİLEN VERİ
+- twosides_kemo.csv.gz: L01 ilacı içeren 3.588.850 satır (58 MB, GitHub'a yüklenmedi).
+- twosides_kemo_ciftler.csv: 23.580 benzersiz ilaç çifti, 1,4 MB.
+  Sütunlar: ilaç 1/2 RxNorm kimliği ve adı, yan_etki_sayisi, max_prr, ort_prr.
+
+AÇIK NOKTALAR
+- DrugBank Vocabulary indirmesi kapalı; DRKG-TWOSIDES kimlik eşlemesi yapılmadı.
+- Risk etiketi (düşük/orta/yüksek) tanımlanmadı, danışmanla belirlenecek.
+- Negatif örnekler üretilmedi.
