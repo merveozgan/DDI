@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block title %}İlaçlar · OncoDDI{% endblock %}
+{% block page %}drugs{% endblock %}
+{% block content %}
+<h1>İlaçlar</h1>
+<div><label class="lb" for="q">İlaç ara (ad, etken madde veya DrugBank kimliği)</label><input id="q" class="in" autocomplete="off"></div>
+<p id="n" class="nt" role="status"></p><p id="msg" class="nt" role="status"></p>
+<div id="list" class="gr"></div>
+<p class="nt">Örnek veri: gerçek ilaç bilgileri veri tablosundan gelecek.</p>
+{% endblock %}

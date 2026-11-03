@@ -1,7 +1,18 @@
 {% extends 'base.html' %}
+{% block page %}home{% endblock %}
 {% block content %}
-<h1>Kanser tedavisinde ilaç etkileşimlerini birlikte değerlendirin</h1>
-<p>Birden fazla ilacı girin; sistem ilaç çiftleri arasındaki olası etkileşimleri, risk düzeyini ve olası biyolojik gerekçeyi gösterir.</p>
-<div class="rw"><a class="bt" href="{% url 'analysis:analysis' %}">Analize başla</a></div>
-<p class="nt">Bu araç karar desteği amaçlıdır; hekim ve eczacı değerlendirmesinin yerini almaz.</p>
+<section class="hero">
+  <h1>Kanser tedavisinde ilaç etkileşimlerini birlikte değerlendirin</h1>
+  <p>Birden fazla ilacı seçin; sistem ilaç çiftleri arasındaki olası etkileşimleri, risk düzeyini ve olası biyolojik gerekçeyi gösterir.</p>
+  <div class="rw"><a class="bt" href="{% url 'analysis:analysis' %}">Yeni analiz başlat</a><a class="bt b2" href="{% url 'analysis:drugs' %}">İlaç veri tabanına git</a></div>
+</section>
+<h2>Nasıl çalışır</h2>
+<div class="gr">
+  <div class="cd"><h3>1. İlaçları seçin</h3><p>Arama kutusuyla 2 ile 10 ilaç ekleyin.</p></div>
+  <div class="cd"><h3>2. Analizi başlatın</h3><p>Tüm ilaç çiftleri ikili olarak değerlendirilir.</p></div>
+  <div class="cd"><h3>3. Sonucu inceleyin</h3><p>Risk düzeyi, olası biyolojik bağlantı ve kaynak birlikte gösterilir.</p></div>
+</div>
+<h2>Son analizler</h2>
+<div id="recent" class="gr"></div>
+<p class="warn">Bu araç yalnızca karar desteği amaçlıdır; hekim ve eczacı değerlendirmesinin yerini almaz.</p>
 {% endblock %}

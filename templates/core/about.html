@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block title %}Hakkında · OncoDDI{% endblock %}
+{% block page %}about{% endblock %}
+{% block content %}
+<h1>Hakkında</h1>
+<div class="cd"><h2>Amaç</h2><p>Kanser hastaları çoğu zaman birden fazla ilacı birlikte kullanır. OncoDDI, bu ilaçlar arasındaki olası etkileşimleri tahmin eden, risk düzeyini gösteren ve olası biyolojik gerekçeyi açıklayan bir karar destek prototipidir.</p></div>
+<div class="cd"><h2>Çalışma mantığı</h2><p>İlaç, gen, protein ve yolak ilişkileri bir bilgi grafiğinde tutulur. Bir graf sinir ağı (GNN) modeli ilaç çiftleri için etkileşim skoru üretir; grafikteki ilişkiler olası biyolojik açıklama olarak gösterilir.</p></div>
+<div class="cd"><h2>Sınırlılıklar</h2><p>Sistem ilaç çiftlerini ikili olarak değerlendirir; üç veya daha fazla ilacın ortak etkisini modellemez. Tahmin skoru klinik risk olasılığı değildir.</p></div>
+<div class="cd"><h2>Teknolojiler ve veri</h2><p>Django, Django REST Framework, PyTorch. Veri kaynakları (erişim koşullarına bağlı): DRKG, DrugBank, TWOSIDES, KEGG.</p></div>
+<p class="nt">Hasan Kalyoncu Üniversitesi · FE401 Çok Disiplinli Entegre Proje</p>
+{% endblock %}

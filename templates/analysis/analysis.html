@@ -1,6 +1,18 @@
 {% extends 'base.html' %}
-{% block title %}İlaç analizi{% endblock %}
+{% block title %}Etkileşim Analizi · OncoDDI{% endblock %}
+{% block page %}analysis{% endblock %}
 {% block content %}
-<h1>İlaç analizi</h1>
-<p class="nt">Bu sayfa taslaktır. İlaç arama ve sonuç ekranı 3. haftada eklenecek.</p>
+<h1>Etkileşim analizi</h1>
+<section id="fm">
+  <label class="lb" for="q">İlaç ara (en az 2 karakter)</label>
+  <input id="q" class="in" autocomplete="off" placeholder="İlaç adı">
+  <ul id="sg" class="sg"></ul>
+  <p id="msg" class="nt" role="status"></p>
+  <h2 id="cnt"></h2>
+  <ul id="sel" class="rw lst"></ul>
+  <p id="hint" class="nt"></p>
+  <div class="rw"><button id="go" class="bt" disabled>Analiz et</button><button id="clr" class="bt b2" type="button">Seçimi temizle</button></div>
+</section>
+<section id="ld" hidden role="status"><div class="cd"><b>Analiz sürüyor…</b><p>İlaç çiftleri hesaplanıyor.</p><div class="pb"><i></i></div><p id="slow" hidden>Analiz beklenenden uzun sürüyor.</p><div class="rw"><button id="cn" class="bt b2" type="button">İptal et</button></div></div></section>
+<section id="er" hidden role="alert"><div class="cd er"><b>Analiz tamamlanamadı</b><p id="errm"></p><div class="rw"><button id="rt" class="bt b2" type="button">Tekrar dene</button></div></div></section>
 {% endblock %}

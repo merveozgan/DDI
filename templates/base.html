@@ -3,19 +3,24 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>{% block title %}İlaç Etkileşimi Tahmini{% endblock %}</title>
+  <title>{% block title %}OncoDDI{% endblock %}</title>
   <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
-<body>
+<body data-page="{% block page %}{% endblock %}" {% block attrs %}{% endblock %}>
+  <a class="skip" href="#main">İçeriğe geç</a>
   <header class="hd">
-    <b>İlaç Etkileşimi Tahmini</b>
-    <nav>
-      <a href="{% url 'core:home' %}">Ana sayfa</a>
-      <a href="{% url 'analysis:analysis' %}">Analiz</a>
+    <a class="logo" href="{% url 'core:home' %}"><b>OncoDDI</b><span>AI-Powered Drug Interaction Analysis</span></a>
+    <nav aria-label="Ana menü">
+      <a href="{% url 'core:home' %}">Ana Sayfa</a>
+      <a href="{% url 'analysis:drugs' %}">İlaçlar</a>
+      <a href="{% url 'analysis:analysis' %}">Etkileşim Analizi</a>
+      <a href="{% url 'analysis:results' %}">Analiz Sonuçları</a>
+      <a href="{% url 'analysis:history' %}">Analiz Geçmişi</a>
+      <a href="{% url 'core:about' %}">Hakkında</a>
     </nav>
   </header>
-  <main class="mn">
-    {% block content %}{% endblock %}
-  </main>
+  <main id="main" class="mn">{% block content %}{% endblock %}</main>
+  <footer class="ft">OncoDDI bir klinik karar destek prototipidir; sonuçlar hekim ve eczacı değerlendirmesinin yerini almaz. <a href="{% url 'core:help' %}">Yardım</a></footer>
+  <script src="{% static 'js/app.js' %}"></script>
 </body>
 </html>

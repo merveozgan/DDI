@@ -1,0 +1,8 @@
+{% extends 'base.html' %}
+{% block title %}İlaç detayı · OncoDDI{% endblock %}
+{% block page %}detail{% endblock %}
+{% block attrs %}data-drug="{{ drug_id }}"{% endblock %}
+{% block content %}
+<div id="out" class="cd"></div><p id="msg" class="nt" role="status"></p>
+<a href="{% url 'analysis:drugs' %}">← İlaç listesine dön</a>
+{% endblock %}

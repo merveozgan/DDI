@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block title %}Yardım · OncoDDI{% endblock %}
+{% block page %}help{% endblock %}
+{% block content %}
+<h1>Yardım ve sıkça sorulan sorular</h1>
+<details><summary>Analiz nasıl yapılır?</summary><p>Etkileşim Analizi sayfasında ilaç adını arayıp seçin, en az 2 ilaç ekleyin ve Analiz et düğmesine basın.</p></details>
+<details><summary>Kaç ilaç seçebilirim?</summary><p>En az 2, en çok 10 ilaç. N ilaç için tüm ikili çiftler (N×(N−1)/2) analiz edilir.</p></details>
+<details><summary>Risk düzeyi ne anlama gelir?</summary><p>Düşük, orta ve yüksek düzeyler modelin tahmininden türetilir. Klinik karar yerine geçmez.</p></details>
+<details><summary>Tahmin skoru nedir?</summary><p>Modelin ürettiği skordur; gerçek klinik risk olasılığı değildir.</p></details>
+<details><summary>"Sonuç yok" ne demek?</summary><p>Çift için yeterli veri bulunamadı. Bu, düşük risk anlamına gelmez.</p></details>
+<details><summary>Analiz geçmişim nerede saklanır?</summary><p>Şimdilik yalnızca bu tarayıcıda saklanır.</p></details>
+{% endblock %}
